@@ -55,7 +55,7 @@ class AdminController extends Controller
             'email' => 'required|string|min:3|max:30',
             'phone' => 'required|string|min:3|max:30',
             'gender' => 'required|in:M,F|string',
-            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2048',
+            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:4000',
             ]);
             if(!$valodator->fails()){
             $admins = new Admin();

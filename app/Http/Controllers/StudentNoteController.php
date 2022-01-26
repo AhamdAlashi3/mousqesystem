@@ -57,6 +57,7 @@ class StudentNoteController extends Controller
             'name_of_the_revised_surah'=>'required|string|max:30',
             'From_Quranic_verse_revised'=>'required|string|max:30',
             'to_Quranic_verse_revised'=>'required|string|max:30',
+            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:2040',
             ]);
             if(!$valodator->fails()){
             $studentNotes = new StudentNote();
@@ -69,6 +70,16 @@ class StudentNoteController extends Controller
             $studentNotes->name_of_the_revised_surah     = $request->get('name_of_the_revised_surah');
             $studentNotes->From_Quranic_verse_revised     = $request->get('From_Quranic_verse_revised');
             $studentNotes->to_Quranic_verse_revised     = $request->get('to_Quranic_verse_revised');
+
+            if($request->hasFile('image'))
+            {
+                $file=$request->file('image');
+                $extention=$file->getClientOriginalExtension();
+                $filename=time().'.'.$extention;
+                $file->move('cms/img/',$filename);
+                $studentNotes->image=$filename;
+            }
+
             $isSaved = $studentNotes->save();
             if($isSaved){
             }

@@ -27,8 +27,8 @@
                             <h3 class="card-title">Create Student </h3>
                         </div>
                         <!-- /.card-header -->
-                        <!-- form start     enctype="multipart/form-data"   -->
-                        <form role="form" id="create_form" >
+                        <!-- form start        -->
+                        <form role="form" id="create_form" enctype="multipart/form-data">
                             @csrf
                             <div class=" card-body">
 
@@ -93,6 +93,14 @@
                                     </div>
                                 </div>
 
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="file">Avatar</label>
+                                        <input type="file" name="file" placeholder="Choose image" id="image" class="form-control">
+                                    </div>
+                                </div>
+
+
                             </div>
                             <!-- /.card-body -->
 
@@ -134,41 +142,44 @@
 
                     </script>
 
-                    <script>
-                        function store() {
-                            // Make a request for a user with a given ID
-                            axios.post('/cms/admin/student', {
-                                    city_id: document.getElementById('city_id').value,
-                                    teacher_id: document.getElementById('teacher_id').value,
-                                    Classes_id: document.getElementById('Classes_id').value,
-                                    first_name: document.getElementById('first_name').value,
-                                    last_name: document.getElementById('last_name').value,
-                                    Data_Of_Barth: document.getElementById('Data_Of_Barth').value,
-                                    email: document.getElementById('email').value,
-                                    phone: document.getElementById('phone').value,
-                                    gender: document.getElementById('male').checked ? 'M' : 'F',
-                                })
-                                .then(function(response) {
-                                    // handle success
-                                    console.log(response.data);
-                                    document.getElementById("create_form").reset();
-                                    showtoster(true, response.data.message);
-                                })
-                                .catch(function(error) {
-                                    // handle error
-                                    console.log(error.response);
-                                    showtoster(false, error.response.data.message);
-                                });
-                        }
+                                <script>
+                                    function store() {
 
-                        function showtoster(status, message) {
-                            if (status) {
-                                toastr.success(message)
-                            } else {
-                                toastr.error(message)
-                            }
-                        }
+                                        let data = new FormData();
+                                        data.append('city_id', document.getElementById('city_id').value);
+                                        data.append('Classes_id', document.getElementById('Classes_id').value);
+                                        data.append('teacher_id', document.getElementById('teacher_id').value);
+                                        data.append('Data_Of_Barth', document.getElementById('Data_Of_Barth').value);
+                                        data.append('first_name', document.getElementById('first_name').value);
+                                        data.append('last_name', document.getElementById('last_name').value);
+                                        data.append('phone', document.getElementById('phone').value);
+                                        data.append('email', document.getElementById('email').value);
+                                        data.append('gender', document.getElementById('male').checked ? 'M' : 'F');
+                                        data.append('image', document.getElementById('image').files[0]);
 
-                    </script>
+                                 // Make a request for a user with a given ID
+                                 axios.post('/cms/admin/student',  data)
+                                     .then(function(response) {
+                                         // handle success
+                                         console.log(response.data);
+                                         document.getElementById("create_form").reset();
+                                         showtoster(true, response.data.message);
+                                     })
+                                     .catch(function(error) {
+                                                // handle error
+                                                console.log(error.response);
+                                                showtoster(false, error.response.data.message);
+                                            });
+                                        }
+
+                                     function showtoster(status, message) {
+                                         if (status) {
+                                            toastr.success(message)
+                                        }else {
+                                            toastr.error(message)
+                                        }
+                                    }
+
+                                </script>
 
                 @endsection

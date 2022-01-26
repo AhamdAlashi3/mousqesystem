@@ -50,7 +50,8 @@ class SupervisorController extends Controller
             'teacher_id'=>'required|string|max:30,teachers',
             'email' => 'required|string|min:3|max:30',
             'phone' => 'required|string|min:3|max:30',
-            'gender' => 'required|in:M,F|string'
+            'gender' => 'required|in:M,F|string',
+            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:4000',
             ]);
             if(!$valodator->fails()){
             $supervisors = new Supervisor();
@@ -61,6 +62,17 @@ class SupervisorController extends Controller
             $supervisors->email     = $request->get('email');
             $supervisors->phone    = $request->get('phone');
             $supervisors->gender = $request->get('gender');
+
+
+            if($request->hasFile('image'))
+            {
+                $file=$request->file('image');
+                $extention=$file->getClientOriginalExtension();
+                $filename=time().'.'.$extention;
+                $file->move('cms/img/',$filename);
+                $supervisors->image=$filename;
+            }
+
             $isSaved = $supervisors->save();
             if($isSaved){
             }

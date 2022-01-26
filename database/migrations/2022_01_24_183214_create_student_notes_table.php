@@ -19,7 +19,7 @@ class CreateStudentNotesTable extends Migration
     {
         Schema::create('student_notes', function (Blueprint $table) {
             $table->id();
-
+            $table->string('image');
             $table->foreignIdFor(Student::class);
             $table->foreign('student_id')->references('id')->on('Students');
 
@@ -36,7 +36,7 @@ class CreateStudentNotesTable extends Migration
             $table->string('From_Quranic_verse');
             $table->string('to_Quranic_verse');
 
-            // $table->string('name_of_the_revised_surah');
+            $table->string('name_of_the_revised_surah');
             $table->string('From_Quranic_verse_revised');
             $table->string('to_Quranic_verse_revised');
 

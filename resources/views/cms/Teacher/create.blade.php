@@ -71,6 +71,13 @@
                                     </div>
                                 </div>
 
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="file">Avatar</label>
+                                        <input type="file" name="file" placeholder="Choose image" id="image" class="form-control">
+                                    </div>
+                                </div>
+
 
                             </div>
                             <!-- /.card-body -->
@@ -107,38 +114,41 @@
 
                     </script>
 
-                    <script>
-                        function store() {
-                            // Make a request for a user with a given ID
-                            axios.post('/cms/admin/teacher', {
-                                    city_id: document.getElementById('city_id').value,
-                                    first_name: document.getElementById('first_name').value,
-                                    last_name: document.getElementById('last_name').value,
-                                    email: document.getElementById('email').value,
-                                    phone: document.getElementById('phone').value,
-                                    gender: document.getElementById('male').checked ? 'M' : 'F',
-                                })
-                                .then(function(response) {
-                                    // handle success
-                                    console.log(response.data);
-                                    document.getElementById("create_form").reset();
-                                    showtoster(true, response.data.message);
-                                })
-                                .catch(function(error) {
-                                    // handle error
-                                    console.log(error.response);
-                                    showtoster(false, error.response.data.message);
-                                });
-                        }
+            <script>
+                function store() {
 
-                        function showtoster(status, message) {
-                            if (status) {
-                                toastr.success(message)
-                            } else {
-                                toastr.error(message)
-                            }
-                        }
+                    let data = new FormData();
+                    data.append('city_id', document.getElementById('city_id').value);
+                    data.append('first_name', document.getElementById('first_name').value);
+                    data.append('last_name', document.getElementById('last_name').value);
+                    data.append('phone', document.getElementById('phone').value);
+                    data.append('email', document.getElementById('email').value);
+                    data.append('gender', document.getElementById('male').checked ? 'M' : 'F');
+                    data.append('image', document.getElementById('image').files[0]);
 
-                    </script>
+                // Make a request for a user with a given ID
+                axios.post('/cms/admin/teacher',  data)
+                 .then(function(response) {
+                     // handle success
+                     console.log(response.data);
+                     document.getElementById("create_form").reset();
+                     showtoster(true, response.data.message);
+                 })
+                 .catch(function(error) {
+                                // handle error
+                                console.log(error.response);
+                                showtoster(false, error.response.data.message);
+                            });
+                    }
+
+                function showtoster(status, message) {
+                if (status) {
+                toastr.success(message)
+                } else {
+                toastr.error(message)
+                }
+                }
+
+            </script>
 
                 @endsection

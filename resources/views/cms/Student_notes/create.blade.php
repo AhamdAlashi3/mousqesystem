@@ -27,8 +27,8 @@
                             <h3 class="card-title">Create Student_notes </h3>
                         </div>
                         <!-- /.card-header -->
-                        <!-- form start     enctype="multipart/form-data"   -->
-                        <form role="form" id="create_form" >
+                        <!-- form start        -->
+                        <form role="form" id="create_form" enctype="multipart/form-data">
                             @csrf
                             <div class=" card-body">
 
@@ -98,6 +98,13 @@
                                         value="{{ old('to_Quranic_verse_revised') }}" placeholder="Enter to_Quranic_verse_revised">
                                 </div>
 
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="file">Avatar</label>
+                                        <input type="file" name="file" placeholder="Choose image" id="image" class="form-control">
+                                    </div>
+                                </div>
+
                             </div>
                             <!-- /.card-body -->
 
@@ -141,42 +148,44 @@
                         });
 
                     </script>
+                                    <script>
+                                        function store() {
 
-                    <script>
-                        function store() {
-                            // Make a request for a user with a given ID
-                            axios.post('/cms/admin/student_notes', {
-                                    city_id: document.getElementById('city_id').value,
-                                    Classes_id: document.getElementById('Classes_id').value,
-                                    student_id: document.getElementById('student_id').value,
-                                    surah_id: document.getElementById('surah_id').value,
-                                    From_Quranic_verse: document.getElementById('From_Quranic_verse').value,
-                                    to_Quranic_verse: document.getElementById('to_Quranic_verse').value,
-                                    name_of_the_revised_surah : document.getElementById('name_of_the_revised_surah').value,
-                                    From_Quranic_verse_revised: document.getElementById('From_Quranic_verse_revised').value,
-                                    to_Quranic_verse_revised: document.getElementById('to_Quranic_verse_revised').value,
-                                })
-                                .then(function(response) {
-                                    // handle success
-                                    console.log(response.data);
-                                    document.getElementById("create_form").reset();
-                                    showtoster(true, response.data.message);
-                                })
-                                .catch(function(error) {
-                                    // handle error
-                                    console.log(error.response);
-                                    showtoster(false, error.response.data.message);
-                                });
-                        }
+                                            let data = new FormData();
+                                            data.append('city_id', document.getElementById('city_id').value);
+                                            data.append('Classes_id', document.getElementById('Classes_id').value);
+                                            data.append('student_id', document.getElementById('student_id').value);
+                                            data.append('surah_id', document.getElementById('surah_id').value);
+                                            data.append('From_Quranic_verse', document.getElementById('From_Quranic_verse').value);
+                                            data.append('to_Quranic_verse', document.getElementById('to_Quranic_verse').value);
+                                            data.append('name_of_the_revised_surah', document.getElementById('name_of_the_revised_surah').value);
+                                            data.append('From_Quranic_verse_revised', document.getElementById('From_Quranic_verse_revised').value);
+                                            data.append('to_Quranic_verse_revised', document.getElementById('to_Quranic_verse_revised').value);
+                                            data.append('image', document.getElementById('image').files[0]);
 
-                        function showtoster(status, message) {
-                            if (status) {
-                                toastr.success(message)
-                            } else {
-                                toastr.error(message)
-                            }
-                        }
+                                     // Make a request for a user with a given ID
+                                     axios.post('/cms/admin/student_notes',  data)
+                                         .then(function(response) {
+                                             // handle success
+                                             console.log(response.data);
+                                             document.getElementById("create_form").reset();
+                                             showtoster(true, response.data.message);
+                                         })
+                                         .catch(function(error) {
+                                                    // handle error
+                                                    console.log(error.response);
+                                                    showtoster(false, error.response.data.message);
+                                                });
+                                            }
 
-                    </script>
+                                         function showtoster(status, message) {
+                                             if (status) {
+                                                toastr.success(message)
+                                            }else {
+                                                toastr.error(message)
+                                            }
+                                        }
+
+                                    </script>
 
                 @endsection

@@ -17,12 +17,13 @@ class CreateSupervisorsTable extends Migration
     {
         Schema::create('supervisors', function (Blueprint $table) {
             $table->id();
+            $table->string('image');
             $table->string('first_name');
             $table->string('last_name');
             $table->string('email')->unique();
             $table->string('phone')->unique();
             $table->enum('gender', ['M', 'F']);
-            
+
             $table->softDeletes();
 
             $table->foreignIdFor(City::class);

@@ -54,6 +54,7 @@ class UserController extends Controller
             'phone' => 'required|string|min:3|max:30',
             'email' => 'required|string|min:3|max:30',
             'gender' => 'required|in:M,F|string',
+            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:4000',
         ]);
         if(!$validator->fails()){
             $users = new Useru();
@@ -64,6 +65,16 @@ class UserController extends Controller
             $users->phone   = $request->get('phone');
             $users->email = $request->get('email');
             $users->gender = $request->get('gender');
+
+            if($request->hasFile('image'))
+            {
+                $file=$request->file('image');
+                $extention=$file->getClientOriginalExtension();
+                $filename=time().'.'.$extention;
+                $file->move('cms/img/',$filename);
+                $users->image=$filename;
+            }
+
             $users->password = Hash::make('user2020');
             $isSaved = $users->save();
             if ($isSaved) {

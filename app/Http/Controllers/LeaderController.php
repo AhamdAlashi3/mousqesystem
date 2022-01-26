@@ -47,7 +47,8 @@ class LeaderController extends Controller
             'city_id'=>'required|string|max:30,cities',
             'email' => 'required|string|min:3|max:30',
             'phone' => 'required|string|min:3|max:30',
-            'gender' => 'required|in:M,F|string'
+            'gender' => 'required|in:M,F|string',
+            'image' => 'required|image|mimes:jpg,png,jpeg,gif,svg|max:4000',
             ]);
             if(!$valodator->fails()){
             $leaders = new Leader();
@@ -57,6 +58,16 @@ class LeaderController extends Controller
             $leaders->email     = $request->get('email');
             $leaders->phone    = $request->get('phone');
             $leaders->gender = $request->get('gender');
+
+            if($request->hasFile('image'))
+            {
+                $file=$request->file('image');
+                $extention=$file->getClientOriginalExtension();
+                $filename=time().'.'.$extention;
+                $file->move('cms/img/',$filename);
+                $leaders->image=$filename;
+            }
+
             $isSaved = $leaders->save();
             if($isSaved){
             }

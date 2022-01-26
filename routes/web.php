@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Auth\AdminAuthController;
 use App\Http\Controllers\CityController;
 use App\Http\Controllers\ClassesController;
 use App\Http\Controllers\DashboardController;
@@ -26,6 +27,12 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::prefix('cms/admin')->middleware('guest:admin')->group(function(){
+    Route::get('/login', [AdminAuthController::class,'showLogin'])->name('auth.login.view');
+    Route::post('/login',[AdminAuthController::class,'login'])->name('auth.login');
+
 });
 
 Route::prefix('cms/admin')->group(function(){
@@ -62,6 +69,15 @@ Route::prefix('cms/admin')->group(function(){
 
     Route::resource('leader', LeaderController::class);
     Route::delete('leader/{id}/restore',[LeaderController::class,'restore'])->name('leader.restore');
+
+    Route::get('/edit-password',[AdminAuthController::class,'editpassword'])->name('auth.edit-password');
+     Route::put('/update-password',[AdminAuthController::class,'updatePassword'])->name('auth.update-password');
+
+     Route::get('/edit-profile',[AdminAuthController::class,'editProfile'])->name('auth.edit-profile');
+     Route::put('/update-profile',[AdminAuthController::class,'updateProfile'])->name('auth.update-profile');
+
+
+    Route::get('/logout',[AdminAuthController::class,'logout'])->name('auth.logout');
 
     // Route::get('dashboard', 'DachboardController@show')->name('cms.dashboard');
 

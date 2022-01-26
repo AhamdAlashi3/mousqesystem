@@ -580,23 +580,23 @@
           <li class="nav-header">Settings</li>
 
 
-          {{-- <li class="nav-item">
-{{ route('auth.edit-profile') }}
-              <a href="" class="nav-link">
+          <li class="nav-item">
+
+              <a href="{{ route('auth.edit-profile') }}" class="nav-link">
                   <i class="nav-icon fas fa-user-edit"></i>
                   <p class="text">Edit Profile</p>
               </a>
           </li>
 
           <li class="nav-item">
-{{ route('auth.edit-password') }}
-              <a href="" class="nav-link">
+
+              <a href="{{ route('auth.edit-password') }}" class="nav-link">
                   <i class="nav-icon fas fa-lock"></i>
                   <p class="text">Change Password</p>
               </a>
-          </li> --}}
+          </li>
 
-          {{-- <li class="nav-item">
+           <li class="nav-item">
             @if (Auth::guard('admin')->check())
                 <a href="{{ route('auth.logout') }}" class="nav-link">
                     <i class="nav-icon fas fa-sign-out-alt"></i>
@@ -608,7 +608,7 @@
                     <p class="text">Logout</p>
                 </a>
             @endif
-        </li> --}}
+        </li>
         {{-- @endcanany --}}
 
 

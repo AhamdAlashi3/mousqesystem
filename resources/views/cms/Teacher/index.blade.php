@@ -35,6 +35,7 @@
                                 <thead>
                                     <tr>
                                         <th>ID</th>
+                                        <th>Image</th>
                                         <th>First_name</th>
                                         <th>Last_name</th>
                                         <th>City</th>
@@ -52,6 +53,7 @@
                                     @foreach ($teachers as $index => $teacher)
                                         <tr>
                                             <td><span class="badge bg-dark">{{ $index + 1 }}</span></td>
+                                            <td><img src="{{ asset('cms/img/'.$teacher->image) }}"  height="100" width="100"/></td>
                                             <td>{{ $teacher->first_name }}</td>
                                             <td>{{ $teacher->last_name }}</td>
                                             <td><span class="badge bg-info">{{ $teacher->cities->name }}</span></td>
