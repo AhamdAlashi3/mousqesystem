@@ -124,7 +124,14 @@
                     <div class="service-time one" style="background:#00b167a9;">
                         <span class="info-icon"><i class="fa fa-ambulance" aria-hidden="true"></i></span>
                         <h3>المرحلة الثانوية</h3>
-                        <p>المرحلة الثانوية  المرحلة الثانوية المرحلة الثانوية المرحلة الثانوية</p>
+                        <div class="time-table-section">
+                            <ul>
+                                <li><span class="right">عاشر</span><span class="left">8.00 – 18.00</span>
+                                </li>
+                                <li><span class="right">حادي عشر</span><span class="left">8.00 – 16.00</span></li>
+                                <li><span class="right">توجيهي</span><span class="left">8.00 – 13.00</span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -132,13 +139,26 @@
                 <div class="row">
                     <div class="service-time middle" style="background:#00b167;">
                         <span class="info-icon"><i class="fa fa-clock-o" aria-hidden="true"></i></span>
-                        <h3>المرحلة الإعدادية</h3>
+                        <h3>المرحلة الإبتدائية</h3>
+                        <p>القسم الاول</p>
+                        <p>المدرسة القرانية</p>
                         <div class="time-table-section">
                             <ul>
-                                <li><span class="left">Monday - Friday</span><span class="right">8.00 – 18.00</span>
+                                <li><span class="right">أول</span><span class="left">8.00 – 18.00</span>
                                 </li>
-                                <li><span class="left">Saturday</span><span class="right">8.00 – 16.00</span></li>
-                                <li><span class="left">Sunday</span><span class="right">8.00 – 13.00</span></li>
+                                <li><span class="right">ثاني</span><span class="left">8.00 – 16.00</span></li>
+                                <li><span class="right">ثالث</span><span class="left">8.00 – 13.00</span></li>
+                            </ul>
+                        </div>
+                        <p>--------------------------------------</p>
+                        <p>القسم الثاني</p>
+                        <p>حلقات</p>
+                        <div class="time-table-section">
+                            <ul>
+                                <li><span class="right">رابع</span><span class="left">8.00 – 18.00</span>
+                                </li>
+                                <li><span class="right">خامس</span><span class="left">8.00 – 16.00</span></li>
+                                <li><span class="right">سادس</span><span class="left">8.00 – 13.00</span></li>
                             </ul>
                         </div>
                     </div>
@@ -148,9 +168,15 @@
                 <div class="row">
                     <div class="service-time three" style="background:#00b167da;">
                         <span class="info-icon"><i class="fa fa-hospital-o" aria-hidden="true"></i></span>
-                        <h3>المرحلة اللإبتدائية</h3>
-                        <p>Dignissimos ducimus qui blanditii sentium volta tum deleniti atque cori as quos dolores et
-                            quas mole.</p>
+                        <h3>المرحلة الإعدادية</h3>
+                        <div class="time-table-section">
+                            <ul>
+                                <li><span class="right">سابع</span><span class="left">8.00 – 18.00</span>
+                                </li>
+                                <li><span class="right">ثامن</span><span class="left">8.00 – 16.00</span></li>
+                                <li><span class="right">تاسع</span><span class="left">8.00 – 13.00</span></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -242,11 +268,11 @@
         </div>
         <!-- end container -->
     </div>
-    <div id="service" class="services wow fadeIn">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-8 col-sm-6 col-xs-12">
-                    <div class="inner-services">
+    <div id="rrr" class="services wow fadeIn">
+        <div  class="container">
+            <div  class="row">
+                <div class="col-lg-8">
+                    <div class="center-services">
                         <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                             <div class="serv">
                                 <span class="icon-service"><img src="{{ asset('mosuqe/images/service-icon1.png') }}"
@@ -297,75 +323,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
-                    <div class="appointment-form">
-                        <h3><span>+</span> Book Appointment</h3>
-                        <div class="form">
-                            <form action="index.html">
-                                <fieldset>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="row">
-                                            <div class="form-group">
-                                                <input type="text" id="name" placeholder="Your Name" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="row">
-                                            <div class="form-group">
-                                                <input type="email" placeholder="Email Address" id="email" />
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 select-section">
-                                        <div class="row">
-                                            <div class="form-group">
-                                                <select class="form-control">
-                                                    <option>Day</option>
-                                                    <option>Sunday</option>
-                                                    <option>Monday</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group">
-                                                <select class="form-control">
-                                                    <option>Time</option>
-                                                    <option>AM</option>
-                                                    <option>PM</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="row">
-                                            <div class="form-group">
-                                                <select class="form-control">
-                                                    <option>mosuqe Name</option>
-                                                    <option>Mr.XYZ</option>
-                                                    <option>Mr.ABC</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="row">
-                                            <div class="form-group">
-                                                <textarea rows="4" id="textarea_message" class="form-control"
-                                                    placeholder="Your Message..."></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                        <div class="row">
-                                            <div class="form-group">
-                                                <div class="center"><button type="submit">Submit</button></div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </fieldset>
-                            </form>
-                        </div>
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
@@ -378,8 +336,8 @@
         <div class="container">
 
             <div class="heading">
-                <span class="icon-logo"><img src="{{ asset('mosuqe/images/icon-logo.png') }}" alt="#"></span>
-                <h2>The Specialist Clinic</h2>
+                <span class="icon-logo"><img src="{{ asset('mosuqe/images/amin.jpg') }}" alt="#"></span>
+                <h2>The Supervisor </h2>
             </div>
 
             <div class="row dev-list text-center">
@@ -390,11 +348,11 @@
                         <img src="{{ asset('mosuqe/images/mosuqe_01.jpg') }}" alt=""
                             class="img-responsive img-rounded">
                         <div class="widget-title">
-                            <h3>Soren Bo Bostian</h3>
-                            <small>Clinic Owner</small>
+                            <h3>محمد أبو جبل</h3>
+                            <small>(أبو مصعب)</small>
                         </div>
                         <!-- end title -->
-                        <p>Hello guys, I am Soren from Sirbistana. I am senior art director and founder of Violetta.</p>
+                        <p>مشرف الثانوية</p>
 
                         <div class="footer-social">
                             <a href="#" class="btn grd1"><i class="fa fa-facebook"></i></a>
@@ -413,11 +371,11 @@
                         <img src="{{ asset('mosuqe/images/mosuqe_02.jpg') }}" alt=""
                             class="img-responsive img-rounded">
                         <div class="widget-title">
-                            <h3>Bryan Saftler</h3>
-                            <small>Internal Diseases</small>
+                            <h3>براء أبو كميل</h3>
+                            <small>(أبو نضال)</small>
                         </div>
                         <!-- end title -->
-                        <p>Hello guys, I am Soren from Sirbistana. I am senior art director and founder of Violetta.</p>
+                        <p>مشرف الإعدادية</p>
 
                         <div class="footer-social">
                             <a href="#" class="btn grd1"><i class="fa fa-facebook"></i></a>
@@ -433,11 +391,11 @@
                     <div class="widget clearfix">
                         <img src="images/mosuqe_03.jpg" alt="" class="img-responsive img-rounded">
                         <div class="widget-title">
-                            <h3>Matthew Bayliss</h3>
-                            <small>Orthopedics Expert</small>
+                            <h3>عبدالرحمن عليان</h3>
+                            <small>(أبو محمد)</small>
                         </div>
                         <!-- end title -->
-                        <p>Hello guys, I am Soren from Sirbistana. I am senior art director and founder of Violetta.</p>
+                        <p>مشرف الحلقات اللإبتدائية.</p>
 
                         <div class="footer-social">
                             <a href="#" class="btn grd1"><i class="fa fa-facebook"></i></a>
@@ -458,75 +416,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="tab-content">
-                        <div class="tab-pane active fade in" id="tab1">
-                            <div class="row text-center">
-                                <div class="col-md-4">
-                                    <div class="pricing-table">
-                                        <div class="pricing-table-header">
-                                            <h2> Hosting</h2>
-                                            <h3>month</h3>
-                                        </div>
-                                        <div class="pricing-table-features">
-                                            <p><i class="fa fa-envelope-o"></i> <strong>250</strong> Email Addresses</p>
-                                            <p><i class="fa fa-rocket"></i> <strong>125GB</strong> of Storage</p>
-                                            <p><i class="fa fa-database"></i> <strong>140</strong> Databases</p>
-                                            <p><i class="fa fa-link"></i> <strong>60</strong> Domains</p>
-                                            <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support
-                                            </p>
-                                        </div>
-                                        <div class="pricing-table-sign-up">
-                                            <a href="#contact" data-scroll=""
-                                                class="btn btn-dark btn-radius btn-brd">Order Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="pricing-table pricing-table-highlighted">
-                                        <div class="pricing-table-header grd1">
-                                            <h2>WordPress Hosting</h2>
-                                            <h3>year</h3>
-                                        </div>
-                                        <div class="pricing-table-space"></div>
-                                        <div class="pricing-table-text">
-                                            <p>This is a perfect choice for small businesses and startups.</p>
-                                        </div>
-                                        <div class="pricing-table-features">
-                                            <p><i class="fa fa-envelope-o"></i> <strong>150</strong> Email Addresses</p>
-                                            <p><i class="fa fa-rocket"></i> <strong>65GB</strong> of Storage</p>
-                                            <p><i class="fa fa-database"></i> <strong>60</strong> Databases</p>
-                                            <p><i class="fa fa-link"></i> <strong>30</strong> Domains</p>
-                                            <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support
-                                            </p>
-                                        </div>
-                                        <div class="pricing-table-sign-up">
-                                            <a href="#contact" data-scroll=""
-                                                class="btn btn-light btn-radius btn-brd grd1 effect-1">Order Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="pricing-table">
-                                        <div class="pricing-table-header">
-                                            <h2>Reseller Hosting</h2>
-                                            <h3>one-time</h3>
-                                        </div>
-                                        <div class="pricing-table-features">
-                                            <p><i class="fa fa-envelope-o"></i> <strong>250</strong> Email Addresses</p>
-                                            <p><i class="fa fa-rocket"></i> <strong>125GB</strong> of Storage</p>
-                                            <p><i class="fa fa-database"></i> <strong>140</strong> Databases</p>
-                                            <p><i class="fa fa-link"></i> <strong>60</strong> Domains</p>
-                                            <p><i class="fa fa-life-ring"></i> <strong>24/7 Unlimited</strong> Support
-                                            </p>
-                                        </div>
-                                        <div class="pricing-table-sign-up">
-                                            <a href="#contact" data-scroll=""
-                                                class="btn btn-dark btn-radius btn-brd">Order Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- end row -->
-                        </div>
+
                         <!-- end pane -->
                         <div class="tab-pane fade" id="tab2">
                             <div class="row text-center">
@@ -589,7 +479,6 @@
 
     <!-- end mosuqe section -->
 
-
     <footer id="footer" class="footer-area wow fadeIn">
         <div class="container">
             <div class="row">
@@ -600,8 +489,8 @@
                             artisan.</p>
                     </div>
                 </div>
-                <div class="col-md-10">
-                    <div class="footer-info padding">
+                <div class="col-md-2">
+                    <div class="footer-info">
                         <h3>CONTACT US</h3>
                         <p><i class="fa fa-map-marker" aria-hidden="true"></i><a href="https://www.facebook.com/alameen.mosque/?ref=page_internal">Facbook</a></p>
                         <p><i class="fa fa-paper-plane" aria-hidden="true"></i> </p>
@@ -617,9 +506,8 @@
         <div  class="container">
             <div class="row">
                 <div  class="col-md-8">
-                    <div class="footer-text">
-                        <p>© 2021 mosuqe System. All Rights Reserved.</p>
-                    </div>
+                    <strong>Copyright &copy; {{ now()->year }} <a href="#"><span class="badge bg-info">Al-Amin Muhammed Mosque</span></a> . </strong> All rights reserved.
+                    <h3>The <span class="badge bg-danger"> Developers </span> : <span class="badge bg-dark">Ahmad Alashi (Abo_Hamza)💚<span></h3>
                 </div>
                 {{-- <div class="col-md-4">
                     <div class="social">

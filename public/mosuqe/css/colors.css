@@ -50,7 +50,9 @@ a:focus {
 /**************************************
 GRADIENTS
 **************************************/
-
+#rrr{
+    background-color: green !important;
+}
 .grd1-trans {
     background: rgb(0, 219, 73);
     background: -moz-linear-gradient(top, rgba(0, 219, 73, 0.6) 0%, rrgba(39, 255, 68, 0.6)100%);
