@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Auth\AdminAuthController;
+use App\Http\Controllers\Auth\UserAuthController;
 use App\Http\Controllers\CityController;
 use App\Http\Controllers\ClassesController;
 use App\Http\Controllers\DashboardController;
@@ -25,9 +26,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+    // Route::view('', 'cms.welcome')->name('cms.welcome');
+
 
 Route::prefix('cms/admin')->middleware('guest:admin')->group(function(){
     Route::get('/login', [AdminAuthController::class,'showLogin'])->name('auth.login.view');
@@ -35,8 +39,10 @@ Route::prefix('cms/admin')->middleware('guest:admin')->group(function(){
 
 });
 
+Route::view('', 'welcome')->name('welcome');
+
 Route::prefix('cms/admin')->group(function(){
-    // Route::view('', 'cms.dashboard')->name('cms.dashboard');
+    
     Route::resource('', DashboardController::class);
 
 
@@ -81,6 +87,43 @@ Route::prefix('cms/admin')->group(function(){
 
     // Route::get('dashboard', 'DachboardController@show')->name('cms.dashboard');
 
+});
+
+Route::prefix('cms/user')->middleware('guest:users')->group(function(){
+    Route::get('/login', [UserAuthController::class,'showLogin'])->name('auth-user.login.view');
+    Route::post('/login',[UserAuthController::class,'login'])->name('auth-user.login');
+
+    Route::get('/edit-password',[UserAuthController::class,'editpassword'])->name('auth.edit-password');
+    Route::put('/update-password',[UserAuthController::class,'updatePassword'])->name('auth.update-password');
+
+    Route::get('/edit-profile',[UserAuthController::class,'editProfile'])->name('auth.edit-profile');
+    Route::put('/update-profile',[UserAuthController::class,'updateProfile'])->name('auth.update-profile');
+
+
+});
+
+Route::prefix('cms/user')->middleware('auth:users')->group(function(){
+    // Route::view('', 'cms.dashboard')->name('cms.dashboard');
+
+    // Route::resource('/admin', AdminController::class);
+    // Route::resource('/user', UserController::class);
+    // Route::resource('/doctor', DoctorController::class);
+    // Route::resource('/patient', PatientController::class);
+    // Route::resource('/secretary', SecretaryController::class);
+    // Route::resource('/city', CityController::class);
+
+    // Route::resource('/roles', RolesController::class);
+    // Route::resource('/permissions', PermissionController::class);
+
+    // Route::resource('admin.permission',AdminPermissionController::class);
+
+//user
+    // Route::get('/edit-password',[UserAuthController::class,'editpassword'])->name('auth.edit-password');
+    // Route::put('/update-password',[UserAuthController::class,'updatePassword'])->name('auth.update-password');
+    // Route::get('/edit-profile',[UserAuthController::class,'editProfile'])->name('auth.edit-profile');
+    // Route::put('/update-profile',[UserAuthController::class,'updateProfile'])->name('auth.update-profile');
+
+    Route::get('/logout-user',[UserAuthController::class,'logout'])->name('auth-user.logout');
 });
 
 

@@ -1,0 +1,99 @@
+/******************************************
+    File Name: colors.css
+/****************************************** */
+
+.customwidget li i,
+.navbar {
+    /* color: green; */
+    background-color: green;
+}
+#ahmadtop{
+    background-color: green;
+}
+#ahmadcenter{
+    color: green !important;
+}
+#user{
+    color: green !important;
+}
+#user2{
+    background-color: green !important;
+}
+
+#user3{
+    color: green !important;
+}
+#user4{
+    background-color: green !important;
+}
+.out{
+    background-color: green !important;
+}
+
+.h4{
+    color: green !important;
+}
+
+#foter{
+    background-color: green;
+}
+
+
+.lead strong,
+.icon-wrapper:hover a,
+a:hover,
+a:focus {
+    color: #27ff44
+}
+
+
+/**************************************
+GRADIENTS
+**************************************/
+
+.grd1-trans {
+    background: rgb(0, 219, 73);
+    background: -moz-linear-gradient(top, rgba(0, 219, 73, 0.6) 0%, rrgba(39, 255, 68, 0.6)100%);
+    background: -webkit-linear-gradient(top, rgba(0, 219, 110, 0.6) 0%, rgba(39, 255, 104, 0.6) 100%);
+    background: linear-gradient(to bottom, rgba(0, 219, 66, 0.6) 0%, rgba(39, 255, 93, 0.6) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#db00ce', endColorstr='#2750ff', GradientType=0);
+}
+
+.icon_wrap:hover,
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:focus,
+.nav-pills > li.active > a:hover,
+.icon-wrapper:hover i,
+.grd1 {
+    color: #ffffff;
+    background: #12db00;
+    background: -moz-linear-gradient(left, #00db6e 0%, #27ff44 100%);
+    background: -webkit-linear-gradient(left, #00db25 0%, #27ff4b 100%);
+    background: linear-gradient(to right, #00db54 0%, #27ff81 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#db00ce', endColorstr='#2750ff', GradientType=1);
+}
+
+.icon_wrap,
+.dmtop:hover,
+.cac:hover,
+.features-right li:hover i,
+.features-left li:hover i,
+.nav-pills > li:hover > a,
+.nav-pills > li:focus > a,
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:focus,
+.nav-pills > li.active > a:hover,
+.divider-bar,
+.owl-next:hover i,
+.owl-prev:hover i,
+.icon-wrapper:hover i:hover,
+.grd1:hover,
+.grd1:focus {
+    background-position: 100px;
+    color: #ffffff;
+    background: #27ff44;
+    background: -moz-linear-gradient(left, #27ff27 0%, #12db00 100%);
+    background: -webkit-linear-gradient(left, #27ff32 0%, #00db2f 100%);
+    background: linear-gradient(to right, #64ff27 0%, #12db00 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#2750ff', endColorstr='#db00ce', GradientType=1);
+}

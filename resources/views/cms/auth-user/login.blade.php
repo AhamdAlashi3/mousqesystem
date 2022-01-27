@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Al-Amin-Mousqe-System | Login</title>
+    <title>Mosuqe-System | User</title>
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -25,17 +25,14 @@
 
 <body class="hold-transition login-page">
     <div class="login-box">
-        {{-- <div class="login-logo">
-            <a href="../../index2.html"><b>Doctor-System </b>| Login</a>
-        </div> --}}
         <div class="login-logo">
-            <a href="#"><b>Al-Amin-System | </b><span class="badge bg-info"> Admin</span></a>
+            <a href="../../index2.html"><b>Mosuqe-System</b> | User</b></a>
         </div>
         <!-- /.login-logo -->
         <div class="card">
             <div class="card-body login-card-body">
                 <p class="login-box-msg">Sign in to start your session</p>
-                @csrf
+
                 <form role="form">
                     <div class="input-group mb-3">
                         <input type="email" class="form-control" id="email" placeholder="Email">
@@ -73,7 +70,7 @@
                 <div class="social-auth-links text-center mb-3">
                     <p>- OR -</p>
                     <a href="#" class="btn btn-block btn-primary">
-                        <i class="nav-icon fab fa-facebook "></i> Sign in using Facebook
+                        <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
                     </a>
                     <a href="#" class="btn btn-block btn-danger">
                         <i class="nav-icon fab fa-google"></i> Sign in using Google
@@ -82,17 +79,13 @@
                         <i class="nav-icon fab fa-github "></i> Sign in using Github
                     </a>
                 </div>
-
                 <!-- /.social-auth-links -->
 
                 <p class="mb-1">
                     <a href="forgot-password.html">I forgot my password</a>
                 </p>
                 <p class="mb-0">
-                    <a href="{{ route('auth-user.login') }}" class="text-center">Register in User</a>
-                </p>
-                <p class="mb-0">
-                    <a href="{{ route('welcome') }}" class="text-center">back</a>
+                    <a href="{{ route('auth.login') }}" class="text-center">Register in Admin</a>
                 </p>
             </div>
             <!-- /.login-card-body -->
@@ -115,8 +108,7 @@
     <script>
         function login() {
             // Make a request for a user with a given ID
-            axios.post('/cms/admin/login', {
-                    guard: '',
+            axios.post('/cms/user/login', {
                     email: document.getElementById('email').value,
                     password: document.getElementById('password').value,
                     remember_me: document.getElementById('remember').checked,
@@ -126,6 +118,7 @@
                     console.log(response.data);
                     showtoster(true, response.data.message);
                     window.location.href = '{{ route('index') }}';
+                    a
                 })
                 .catch(function(error) {
                     // handle error
