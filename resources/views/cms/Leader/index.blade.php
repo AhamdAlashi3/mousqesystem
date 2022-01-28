@@ -66,17 +66,17 @@
                                             <td>{{ $leader->updated_at->diffForHumans() }}</td>
                                             <td>
                                                 <div class="btn-group">
-                                                    {{-- @canany(['Update-leaders'],['Delete-leaders']) --}}
+                                                    @canany(['Update-Student_notes'],['Delete-Student_notes'])
 
-                                                        {{-- @can('Update-leaders') --}}
+                                                        @can('Update-Student_notes')
                                                             <a href="{{ route('leader.edit', $leader->id) }}" type="button"
                                                                 class="btn btn-info">
                                                                 <i class="fas fa-edit" aria-hidden="true"></i>
                                                             </a>
-                                                        {{-- @endcan --}}
+                                                        @endcan
 
 
-                                                        {{-- @can('Delete-leaders') --}}
+                                                        @can('Delete-Student_notes')
                                                             @if (!$leader->trashed())
                                                                 {{-- @if (Auth::user()->id !== $leader->id) --}}
                                                                     <a href="#" class="btn btn-danger"
@@ -84,8 +84,8 @@
                                                                             class="fas fa-trash"></i></a>
                                                                 {{-- @endif --}}
                                                             @endif
-                                                        {{-- @endcan --}}
-                                                    {{-- @endcanany --}}
+                                                        @endcan
+                                                    @endcanany
 
                                                     @if ($leader->trashed())
                                                         <a href="#" class="btn btn-success"

@@ -70,22 +70,22 @@
                                             <td>
                                                 <div class="btn-group">
 
-                                                    {{-- @canany(['Update-Teachers'],['Delete-Teachers']) --}}
-                                                        {{-- @can('Update-Teachers') --}}
+                                                    @canany(['Update-Teachers'],['Delete-Teachers'])
+                                                        @can('Update-Teachers')
                                                             <a href="{{ route('teacher.edit', $teacher->id) }}" type="button"
                                                                 class="btn btn-info">
                                                                 <i class="fas fa-edit" aria-hidden="true"></i>
                                                             </a>
-                                                        {{-- @endcan --}}
+                                                        @endcan
 
-                                                        {{-- @can('Delete-Teachers') --}}
+                                                        @can('Delete-Teachers')
                                                             @if (!$teacher->trashed())
                                                                     <a href="#" class="btn btn-danger"
                                                                         onclick="confirmDestroy({{ $teacher->id }}, this)"><i
                                                                             class="fas fa-trash"></i></a>
                                                             @endif
-                                                        {{-- @endcan --}}
-                                                    {{-- @endcanany --}}
+                                                        @endcan
+                                                    @endcanany
 
                                                     @if ($teacher->trashed())
                                                         <a href="#" class="btn btn-success"

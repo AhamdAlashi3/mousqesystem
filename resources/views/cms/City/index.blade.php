@@ -97,21 +97,21 @@
                                             <td>{{ $city->updated_at }}</td>
                                             <td>
                                                 <div class="btn-group">
-                                                    {{-- @canany(['Update-Cities'],['Delete-Cities']) --}}
-                                                        {{-- @can('Update-Cities') --}}
+                                                    @canany(['Update-Cities'],['Delete-Cities'])
+                                                        @can('Update-Cities')
                                                             <a href="{{ route('city.edit', $city->id) }}" type="button"
                                                                 class="btn btn-info"><i class="fas fa-edit"></i></a>
-                                                                {{-- @endcan --}}
+                                                        @endcan
 
-                                                        {{-- @can('Delete-Cities') --}}
+                                                        @can('Delete-Cities')
 
                                                             @if (!$city->trashed())
                                                                 <a href="#" class="btn btn-danger"
                                                                     onclick="confirmDestroy({{ $city->id }}, this)"><i
                                                                         class="fas fa-trash"></i></a>
                                                             @endif
-                                                        {{-- @endcan --}}
-                                                    {{-- @endcanany --}}
+                                                        @endcan
+                                                    @endcanany
 
                                                     @if ($city->trashed())
                                                         <a href="#" class="btn btn-success"

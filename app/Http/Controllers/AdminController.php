@@ -22,7 +22,7 @@ class AdminController extends Controller
         //
         // $data=Admin::count();
         // return $data;
-        $admins=Admin::withTrashed()->paginate(10);
+        $admins=Admin::withTrashed()->withCount('permissions')->paginate(10);
         return response()->view('cms.Admin.index',['admins'=>$admins]);
     }
 

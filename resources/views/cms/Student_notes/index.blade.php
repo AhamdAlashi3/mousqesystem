@@ -70,17 +70,17 @@
                                             <td>{{ $Student_note->updated_at->diffForHumans() }}</td>
                                             <td>
                                                 <div class="btn-group">
-                                                    {{-- @canany(['Update-Admins'],['Delete-Admins']) --}}
+                                                    @canany(['Update-Admins'],['Delete-Admins'])
 
-                                                        {{-- @can('Update-Admins') --}}
+                                                        @can('Update-Admins')
                                                             <a href="{{ route('student_notes.edit', $Student_note->id) }}" type="button"
                                                                 class="btn btn-info">
                                                                 <i class="fas fa-edit" aria-hidden="true"></i>
                                                             </a>
-                                                        {{-- @endcan --}}
+                                                        @endcan
 
 
-                                                        {{-- @can('Delete-Admins') --}}
+                                                        @can('Delete-Admins')
                                                             @if (!$Student_note->trashed())
                                                                 {{-- @if (Auth::user()->id !== $admin->id) --}}
                                                                     <a href="#" class="btn btn-danger"
@@ -88,8 +88,8 @@
                                                                             class="fas fa-trash"></i></a>
                                                                 {{-- @endif --}}
                                                             @endif
-                                                        {{-- @endcan --}}
-                                                    {{-- @endcanany --}}
+                                                        @endcan
+                                                    @endcanany
 
                                                     @if ($Student_note->trashed())
                                                         <a href="#" class="btn btn-success"

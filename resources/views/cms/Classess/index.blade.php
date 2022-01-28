@@ -61,23 +61,21 @@
                                             <td>{{ $class->updated_at }}</td>
                                             <td>
                                                 <div class="btn-group">
+                                                    @canany(['Update-Classess'],['Delete-Classess'])
+
+                                                       @can('Update-Classess')
                                                         <a href="{{ route('class.edit', $class->id) }}" type="button"
                                                             class="btn btn-info"><i class="fas fa-edit"></i></a>
+                                                        @endcan
 
-                                                    {{-- <form role="form" method="POST" action="{{ route('cities.destroy',$city->id) }}">
-                                                             @csrf
-                                                             @method('DELETE')
-                                                             <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i></button>
-                                                        </form> --}}
-
-                                                    {{-- <a href="{{ route('cities.destroy',$city->id) }}" class="btn btn-danger"><i class="fas fa-trash"></i></a> --}}
-
-                                                        @if (!$class->trashed())
+                                                        @can('Delete-Cities')
+                                                           @if (!$class->trashed())
                                                             <a href="#" class="btn btn-danger"
                                                                 onclick="confirmDestroy({{ $class->id }}, this)"><i
                                                                     class="fas fa-trash"></i></a>
-                                                        @endif
-
+                                                           @endif
+                                                       @endcan
+                                                    @endcanany
                                                     @if ($class->trashed())
                                                         <a href="#" class="btn btn-success"
                                                             onclick="restore({{ $class->id }})"><i

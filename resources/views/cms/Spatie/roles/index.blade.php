@@ -1,8 +1,8 @@
-@extends('cms.partents')
+@extends('cms.parents')
 
-@section('title', 'Index Users')
-@section('page-name', 'Index Users')
-@section('main-page', 'Users')
+@section('title', 'Index Role')
+@section('page-name', 'Index Role')
+@section('main-page', 'Role')
 @section('sub-page', 'Index')
 
 @section('styles')
@@ -17,7 +17,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h2 class="card-title">Data Users</h2>
+                            <h3 class="card-title">Data Role</h3>
                             <div class="card-tools">
                                 <div class="input-group input-group-sm" style="width: 150px;">
                                     <input type="text" name="table_search" class="form-control float-right"
@@ -35,50 +35,38 @@
                                 <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>First_name</th>
-                                        <th>Last_name</th>
-                                        <th>DoB</th>
-                                        <th>City</th>
-                                        <th>Email</th>
-                                        <th>Phone</th>
-                                        <th>Gender</th>
+                                        <th>Name</th>
+                                        <th>Guard</th>
                                         <th>Created_at</th>
                                         <th>Updated_at</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($users as $index => $user)
+                                    @foreach ($roles as $index => $role)
                                         <tr>
-                                            <td><span class="badge bg-dark">{{ $index + 1 }}</span></td>
-                                            <td>{{ $user->first_name }}</td>
-                                            <td>{{ $user->last_name }}</td>
-                                            <td>{{ $user->DoB }}</td>
-                                            <td><span class="badge bg-info">{{ $user->cities->name }}</span></td>
-                                            <td>{{ $user->email }}</td>
-                                            <td>{{ $user->phone }}</td>
-                                            <td><span class="badge bg-success">{{ $user->gender_title }}</span></td>
-                                            <td>{{ $user->created_at->diffForHumans() }}</td>
-                                            <td>{{ $user->updated_at->diffForHumans() }}</td>
+                                            <td>{{ $index + 1 }}</td>
+                                            <td>{{ $role->name }}</td>
+                                            <td><span class="badge bg-success">{{ $role->guard_name }}</span></td>
+                                            <td><a href="{{ route('role.permissions.index', $role->id) }}"
+                                                    class="btn btn-info">{{ $role->permissions_count }} /
+                                                    Permissions <i class="fas fa-user-tie"></i></a></td>
+
+                                            <td>{{ $role->created_at->diffForHumans() }}</td>
+                                            <td>{{ $role->updated_at->diffForHumans() }}</td>
                                             <td>
                                                 <div class="btn-group">
-                                                    @canany(['Update-Users'],['Delete-Users'])
-                                                        @can('Update-Users')
-                                                        <a href="{{ route('user.edit', $user->id) }}" type="button"
-                                                            class="btn btn-info">
-                                                            <i class="fas fa-edit" aria-hidden="true"></i>
-                                                        </a>
-                                                        @endcan
 
-                                                        @can('Delete-Users')
-                                                            {{-- @if (Auth::user()->id !== $admin->id) --}}
-                                                                <a href="#" class="btn btn-danger"
-                                                                    onclick="confirmDestroy({{ $user->id }}, this)"><i
-                                                                        class="fas fa-trash"></i></a>
-                                                            {{-- @endif --}}
-                                                        @endcan
-                                                    @endcanany
+                                                    <a href="{{ route('roles.edit', $role->id) }}" type="button"
+                                                        class="btn btn-info">
+                                                        <i class="fas fa-edit" aria-hidden="true"></i>
+                                                    </a>
 
+                                                    {{-- @if (Auth::user()->id !== $role->id) --}}
+                                                    <a href="#" class="btn btn-danger"
+                                                        onclick="confirmDestroy({{ $role->id }}, this)"><i
+                                                            class="fas fa-trash"></i></a>
+                                                    {{-- @endif --}}
                                                 </div>
                                             </td>
                                         </tr>
@@ -89,7 +77,7 @@
                         <div class="card-footer clearfix">
                             {{-- {{ $merchants->render() }} --}}
 
-                            {{ $users->links() }}
+                            {{ $roles->links() }}
 
 
                         </div>
@@ -106,10 +94,6 @@
 @section('scripts')
     <script>
         function confirmDestroy(id, td) {
-            // console.log("WE ARE IN JS");
-            // alert("WELCOME IN JS");
-            // console.log("CITY ID: " + id);
-
             Swal.fire({
                 title: 'Are you sure?',
                 text: "You won't be able to revert this!",
@@ -131,28 +115,8 @@
             });
         }
 
-        function restore(id) {
-            axios.delete('/cms/admin/user/' + id + "/restore")
-                .then(function(response) {
-                    // handle success
-                    console.log(response.data);
-                    // td.closest('tr').remove();
-                    showAlert(response.data);
-                })
-                .catch(function(error) {
-                    // handle error
-                    // console.log(error);
-                    console.log(error.response);
-                    showAlert(error.response.data);
-                })
-                .then(function() {
-                    // always executed
-                });
-        }
-
         function destroy(id, td) {
-
-            axios.delete('/cms/admin/user/' + id)
+            axios.delete('/cms/admin/roles/' + id)
                 .then(function(response) {
                     // handle success
                     console.log(response.data);
@@ -197,5 +161,6 @@
                 }
             });
         }
+
     </script>
 @endsection

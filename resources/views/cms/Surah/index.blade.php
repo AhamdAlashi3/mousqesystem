@@ -67,21 +67,20 @@
                                             <td>{{ $surah->updated_at }}</td>
                                             <td>
                                                 <div class="btn-group">
-                                                    {{-- @canany(['Update-Cities'],['Delete-Cities']) --}}
-                                                        {{-- @can('Update-Cities') --}}
+                                                    @canany(['Update-Surahs'],['Delete-Surahs'])
+                                                        @can('Update-Surahs')
                                                             <a href="{{ route('surah.edit', $surah->id) }}" type="button"
                                                                 class="btn btn-info"><i class="fas fa-edit"></i></a>
-                                                                {{-- @endcan --}}
+                                                        @endcan
 
-                                                        {{-- @can('Delete-Cities') --}}
-
+                                                        @can('Delete-Surahs')
                                                             @if (!$surah->trashed())
                                                                 <a href="#" class="btn btn-danger"
                                                                     onclick="confirmDestroy({{ $surah->id }}, this)"><i
                                                                         class="fas fa-trash"></i></a>
                                                             @endif
-                                                        {{-- @endcan --}}
-                                                    {{-- @endcanany --}}
+                                                        @endcan
+                                                    @endcanany
 
                                                     @if ($surah->trashed())
                                                         <a href="#" class="btn btn-success"
