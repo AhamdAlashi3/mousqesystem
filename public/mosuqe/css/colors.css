@@ -61,6 +61,10 @@ GRADIENTS
     filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#db00ce', endColorstr='#2750ff', GradientType=0);
 }
 
+ .serv{
+    background-color: green;
+}
+
 .icon_wrap:hover,
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:focus,

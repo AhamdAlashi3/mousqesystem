@@ -42,7 +42,7 @@
                                         <th>Email</th>
                                         <th>Phone</th>
                                         <th>Gender</th>
-                                        <th>Permissions</th> 
+                                        <th>Permissions</th>
                                         <th>Deleted_at</th>
                                         <th>Created_at</th>
                                         <th>Updated_at</th>
@@ -60,7 +60,7 @@
                                             <td><span class="badge bg-success">{{ $admin->gender_title }}</span></td>
                                             <td><a href="{{ route('admin.permission.index', $admin->id) }}"
                                                     class="btn btn-info">{{ $admin->permissions_count }}/Permissions<i
-                                                        class="fas fa-user-tie"></i></a></td> 
+                                                        class="fas fa-user-tie"></i></a></td>
                                              <td><span @if ($admin->deleted_at) class="badge bg-success"@else class="badge bg-danger" @endif>{{ $admin->trashed() ? 'true' : 'false' }}</span>
                                             </td>
                                             <td>{{ $admin->created_at->diffForHumans() }}</td>
@@ -79,7 +79,7 @@
 
                                                         @can('Delete-Admins')
                                                             @if (!$admin->trashed())
-                                                                 @if (Auth::user()->id !== $admin->id) 
+                                                                 @if (Auth::user()->id !== $admin->id)
                                                                     <a href="#" class="btn btn-danger"
                                                                         onclick="confirmDestroy({{ $admin->id }}, this)"><i
                                                                             class="fas fa-trash"></i></a>

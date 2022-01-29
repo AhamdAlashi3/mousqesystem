@@ -45,7 +45,7 @@ p {
     right: 0;
     bottom: 0;
     left: 0;
-    background: #39b49a;
+    background: #00c6e0;
     z-index: 11000;
     position: fixed;
     display: flex;
@@ -55,7 +55,7 @@ p {
 .header-bottom {
     float: left;
     width: 100%;
-    background: #157fda;
+    background: #15da57;
 }
 header {
     float: left;
@@ -88,14 +88,14 @@ header {
 }
 .header-bottom nav.main-menu ul.nav.navbar-nav > li a:hover, .header-bottom nav.main-menu ul.nav.navbar-nav > li a:focus, .header-bottom nav.main-menu ul.nav.navbar-nav > li a.active {
     color: #fff;
-    background: #39b49b;
+    background: #18a830;
     box-shadow: 5px 5px 0 0px #fff;
 }
 .header-top {
     float: left;
     width: 100%;
     padding: 10px 0;
-}	
+}
 .header-top .navbar-brand {
     float: left;
     height: auto;
@@ -113,7 +113,7 @@ header {
 }
 .info-inner span.icontop {
     float: left;
-    background: #157fda;
+    background: #15da1f;
     width: 45px;
     height: 45px;
     text-align: center;
@@ -182,7 +182,7 @@ header {
     background: none;
     box-shadow: none;
     border: 0;
-    color: #666666;
+    color: #16b323;
     padding: 0 15px 0 15px;
     border-left: solid 1px #ccc;
 }
@@ -214,7 +214,7 @@ header {
 .appointment-form h3 {
     float: left;
     margin: 0;
-    background: linear-gradient(to right, #39b49a 0%, #1d86df 100%);
+    background: linear-gradient(to right, #11a732 0%, #17c73d 100%);
     width: 100%;
     color: #fff;
     padding: 15px 25px;
@@ -244,7 +244,7 @@ header {
     text-align: center;
     position: relative;
     z-index: 2;
-}	
+}
 .text-contant h2 a, .text-contant h2 a:hover, .text-contant h2 a:focus {
     color: #222;
     opacity: 1;
@@ -258,7 +258,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: solid #39b49b 3px;
+    border: solid #16c42d 3px;
 }
 .icon img {
     width: 50px;
@@ -277,7 +277,7 @@ header {
 }
 .info-inner:hover span.icontop,.info-inner:focus span.icontop {
     border-radius: 100%;
-    background: #39b49b;
+    background: #0ea32e;
 }
 .typewrite {
     font-size: 60px;
@@ -385,7 +385,7 @@ body.clinic_version .first-section h2 {
     bottom: 0px;
     z-index: 0;
     border-bottom: solid transparent 65px;
-    border-left: solid #a0cff7 70px;
+    border-left: solid #249c34 70px;
     right: -70px;
 }
 
@@ -411,11 +411,11 @@ body.clinic_version .first-section h2 {
 }
 .icon-logo img {
     width: 60px;
-}	
+}
 .heading h2::after {
     width: 50px;
     height: 4px;
-    background: #39b49b;
+    background: #1cb130;
     content: "";
     display: block;
     margin: 10px auto 0;
@@ -444,7 +444,7 @@ body.clinic_version .section {
     color: #ffffff;
     padding: 12px 0 12px;
     margin: 0;
-    background: #157fda;
+    background: #08b311;
     text-align: center;
 }
 hr.hr1 {
@@ -454,7 +454,7 @@ hr.hr1 {
 }
 .services {
     width: 100%;
-    background: linear-gradient(to right, #1d86df 0%, #39b49a 100%);
+    background: linear-gradient(to right, #1ddf37 0%, #03c21d 100%);
     padding: 75px 0;
 }
 .services {
@@ -464,6 +464,7 @@ hr.hr1 {
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
+    background-color:green ;
 	float:left;
 	width:100%;
 }
@@ -473,7 +474,7 @@ hr.hr1 {
     text-align: center;
     color: #fff;
     margin: 25px 0px;
-}	
+}
 .heading h2.white {
     color: #fff;
 }
@@ -571,7 +572,7 @@ hr.hr1 {
     display: flex;
 }
 .form-group button {
-    background: linear-gradient(to right, #1d86df 0%, #39b49a 100%);
+    background: linear-gradient(to right, #07b842 0%, #11b42c 100%);
     border: none;
     margin-top: 15px;
     margin-bottom: 5px;
@@ -582,7 +583,7 @@ hr.hr1 {
     font-weight: 600;
 }
 .form-group button:hover,.form-group button:focus {
-    background: linear-gradient(to right, #39b49a 0%, #1d86df 100%);
+    background: linear-gradient(to right, #0bb621 0%, #1ddf1d 100%);
 }
 body.clinic_version .dev-list .widget h3 {
     display: inline-block;
@@ -605,7 +606,7 @@ body.clinic_version .dev-list .widget small {
     font-weight: 600;
     letter-spacing: 0.5px;
     font-size: 17px;
-    color: #0071d1;
+    color: #00d10a;
 }
 #price.section {
     background-attachment: fixed;
@@ -661,7 +662,7 @@ body.clinic_version .tab-pane p {
     font-size: 40px;
     line-height: normal;
     left: 0;
-}	
+}
 .footer-info h3 {
     font-size: 16px;
     font-weight: 400;
@@ -711,6 +712,7 @@ body.clinic_version .tab-pane p {
 body.clinic_version .footer {
     background-color: #15191c;
 }
+
 .footer .widget-title img {
     width: 245px;
 }
@@ -719,6 +721,7 @@ body.clinic_version .footer {
 }
 body.clinic_version .footer .widget-title h3 {
     color: #fff;
+
 }
 .contact-section {
     float: left;
@@ -759,14 +762,14 @@ body.clinic_version .footer .widget-title h3 {
 }
 #submitButton {
     padding: 15px 30px;
-    background: linear-gradient(to right, #1d86df 0%, #39b49a 100%);
+    background: linear-gradient(to right, #03b31a 0%, #0cbe39 100%);
     color: #fff;
     border-radius: 50px;
     margin-top: 10px;
 	transition:ease all 1s;
 }
 #submitButton:hover,#submitButton:focus {
-    background: linear-gradient(to right, #39b49a 0%, #1d86df 100%);
+    background: linear-gradient(to right, #15b407 0%, #0baa13 100%);
 }
 .footer-area {
     background: #fff;
@@ -796,7 +799,7 @@ body.clinic_version .footer .widget-title h3 {
     color: #222;
     font-size: 22px;
     font-weight: 600;
-    border-left: solid #157fda 5px;
+    border-left: solid #0bc91b 5px;
     padding: 0 0 0 15px;
     margin-bottom: 24px;
 }
@@ -814,7 +817,7 @@ body.clinic_version .footer .widget-title h3 {
 }
 .copyright-area {
     padding: 20px 0px;
-    background: #157fda;
+    background: #00c000;
     color: #fff;
 	float:left;
 	width:100%;
@@ -842,7 +845,7 @@ body.clinic_version .footer .widget-title h3 {
     font-size: 25px;
     width: 30px;
     text-align: center;
-	color: #157fda;
+	color: #07c737;
 }
 .preloader {
     width: 350px;
@@ -883,7 +886,7 @@ body.clinic_version .footer .widget-title h3 {
     width: 20%;
     font-weight: bold;
     color: #fff;
-    background: linear-gradient(to right, #1d86df 0%, #39b49a 100%);
+    background: linear-gradient(to right, #00ff37 0%, #00f80c 100%);
     border: none;
     font-size: 24px;
     position: relative;
@@ -892,7 +895,7 @@ body.clinic_version .footer .widget-title h3 {
     text-align: center;
 }
 .newsletter-form .mc-submit:hover,.newsletter-form .mc-submit:focus {
-    background: linear-gradient(to right, #39b49a 0%, #1d86df 100%);
+    background: linear-gradient(to right, #00ff0d 0%, #00ff15 100%);
 }
 #testimonials {
     background-image: url('../images/bg-testimonial.png');
@@ -930,7 +933,7 @@ body.clinic_version .footer .widget-title h3 {
 	border-radius:0;
 }
 .tabs-information .nav.nav-tabs li:hover a,.tabs-information .nav.nav-tabs li:focus a,.tabs-information .nav.nav-tabs li.active a {
-    background: linear-gradient(to right, #1d86df 0%, #39b49a 100%);
+    background: linear-gradient(to right, #07c527 0%, #0bd30b 100%);
     border-color: transparent;
     color: #fff;
 }
@@ -938,7 +941,7 @@ body.clinic_version .footer .widget-title h3 {
     float: left;
     width: 98%;
     margin-top: 20px;
-}	
+}
 .tab-content ul {
     list-style: none;
     float: left;
@@ -961,7 +964,7 @@ body.clinic_version .footer .widget-title h3 {
     left: 0;
     top: 7px;
     font-size: 18px;
-    color: #39b49b;
+    color: #1eff00;
 }
 .banner-inner {
     float: left;
@@ -976,7 +979,7 @@ body.clinic_version .footer .widget-title h3 {
     background-size: cover;
     background-attachment: fixed;
     position: relative;
-    border-bottom: solid #157fda 2px;
+    border-bottom: solid #20ad04 2px;
 }
 .banner-inner::after {
     content: "";
@@ -1006,7 +1009,7 @@ body.clinic_version .footer .widget-title h3 {
     display: block;
     width: 50px;
     height: 3px;
-    background: #39b49b;
+    background: #0dbb24;
     margin: 8px auto 5px;
 }
 .breadcrum {
@@ -1024,7 +1027,7 @@ body.clinic_version .footer .widget-title h3 {
     margin-top: 5px;
 }
 .breadcrum ul li a {
-	color:#39b49b;
+	color:#1bb307;
 }
 .box {
     float: left;
@@ -1033,7 +1036,7 @@ body.clinic_version .footer .widget-title h3 {
     margin-top: 118px;
     box-shadow: 0 0 40px -20px rgba(0,0,0,.4);
     margin-bottom: -62px;
-    border: solid #157fda 2px;
+    border: solid #15da25 2px;
 }
 .about2 {
     float: left;
@@ -1042,7 +1045,7 @@ body.clinic_version .footer .widget-title h3 {
 .girl-with-lap {
     float: left;
     width: 100%;
-    background: linear-gradient(to right, #1d86df 0%, #39b49a 100%);
+    background: linear-gradient(to right, #1ddf4e 0%, #06d322 100%);
     margin-bottom: 75px;
     margin-top: -20px;
     color: #fff;
@@ -1100,7 +1103,7 @@ nav.main-menu .navbar-toggle {
     margin-top: 2px;
     margin-right: 0;
     margin-bottom: 0;
-    background: linear-gradient(to right, #1d86df 0%, #39b49a 100%);
+    background: linear-gradient(to right, #00ff2a 0%, #39b49a 100%);
     border: none;
     border-radius: 0;
     font-size: 22px;
@@ -1125,7 +1128,7 @@ nav.main-menu .navbar-toggle {
     letter-spacing: 0;
     font-weight: 500;
     margin-right: 5px;
-}	
+}
 
 /** mobile **/
 
@@ -1162,7 +1165,7 @@ header {
 }
 .navbar-brand {
     padding: 15px 0;
-}	
+}
 .header-bottom nav.main-menu {
     margin: 0;
     padding: 0;
@@ -1170,7 +1173,7 @@ header {
     background: transparent;
     float: left;
     width: 100%;
-}	
+}
 .header-bottom nav.main-menu #navbar {
     margin: 0;
 }
@@ -1189,7 +1192,7 @@ header {
     color: #222;
     background: transparent;
     box-shadow: none;
-}		
+}
 .service-time {
     float: left;
     width: 100%;
@@ -1202,19 +1205,19 @@ header {
 #home.first-section {
     position: relative;
     min-height: auto;
-}	
+}
 .service-time.middle::before {
 	display:none;
 }
 .service-time.middle::after {
 	display:none;
-}	
+}
 .typewrite {
     font-size: 28px;
 }
 .appointment-form {
     padding: 15px;
-}		
+}
 .heading h2 {
     font-size: 28px;
     margin: 10px 0;
@@ -1255,7 +1258,7 @@ body.clinic_version .desc {
 .footer-info h3, .subcriber-info h3 {
     margin-bottom: 20px;
     margin-top: 10px;
-}	
+}
 #home.first-section {
     margin-top: 135px !important;
 }
@@ -1284,19 +1287,19 @@ body.clinic_version .desc {
     float: right;
     width: 100%;
 }
-	
+
 }
 
 @media (min-width:768px) and (max-width:991px) {
 
-nav.main-menu .navbar-header {float: left;position: relative;top: 8px;right: 0;background: transparent;width: auto;height: auto;}	
+nav.main-menu .navbar-header {float: left;position: relative;top: 8px;right: 0;background: transparent;width: auto;height: auto;}
 .right-header {float: right;margin: 11px 0;display: none;}
 nav.main-menu .navbar-toggle {border: solid #fff 2px;}
 .header-top div.container {display: flex;justify-content: center;}
 #navbar.navbar-collapse {float: left;width: 100%;padding: 0;}
 .header-bottom nav.main-menu ul.nav.navbar-nav > li a {color: #fff;font-size: 16px;padding: 15px 15px;
     text-transform: none;letter-spacing: 0;font-weight: 500;margin-right: 5px;}
-.typewrite {font-size: 45px;}	
+.typewrite {font-size: 45px;}
 .service-time.middle::before,.service-time.middle::after {display:none;}
 .service-time {margin-top: 0;}
 .service-time.one {margin-top: -340px;}
@@ -1306,20 +1309,20 @@ nav.main-menu .navbar-toggle {border: solid #fff 2px;}
 #googleMap {height: 540px !important;}
 .footer-info h3, .subcriber-info h3 {float: left;width: 100%;}
 .footer-info p {float: left;width: 100%;}
-	
+
 }
 
 
 @media (min-width:992px) and (max-width:1000px) {
 
-nav.main-menu .navbar-header {float: left;position: relative;top: 8px;right: 0;background: transparent;width: auto;height: auto;}	
+nav.main-menu .navbar-header {float: left;position: relative;top: 8px;right: 0;background: transparent;width: auto;height: auto;}
 .right-header {float: right;margin: 11px 0;display: none;}
 nav.main-menu .navbar-toggle {border: solid #fff 2px;}
 .header-top div.container {display: flex;justify-content: center;}
 #navbar.navbar-collapse {float: left;width: 100%;padding: 0;}
 .header-bottom nav.main-menu ul.nav.navbar-nav > li a {color: #fff;font-size: 16px;padding: 15px 15px;
     text-transform: none;letter-spacing: 0;font-weight: 500;margin-right: 5px;}
-.typewrite {font-size: 45px;}	
+.typewrite {font-size: 45px;}
 .service-time.middle::before,.service-time.middle::after {display:none;}
 .serv p {display: none;}
 .inner-services {margin: 0 0;}
@@ -1329,17 +1332,17 @@ nav.main-menu .navbar-toggle {border: solid #fff 2px;}
 .service-time {padding: 50px 25px;}
 .pricing-table-header h2 {font-size: 25px;}
 .pricing-table-features {padding: 0 10px 15px 0;}
-	
+
 }
 
-@media (min-width:1001px) and (max-width:1199px) { 	
+@media (min-width:1001px) and (max-width:1199px) {
 
 .header-bottom nav.main-menu ul.nav.navbar-nav > li a {padding: 20px 18px;}
 .info-inner {float: left;margin-left: 30px;}
 
 }
 
-@media (min-width:1200px) and (max-width:1240px) {  
+@media (min-width:1200px) and (max-width:1240px) {
 
 .info-inner {float: left;margin-left: 30px;}
 

@@ -268,12 +268,12 @@
         </div>
         <!-- end container -->
     </div>
-    <div id="rrr" class="services wow fadeIn">
+    <div class="serv" class="services wow fadeIn">
         <div  class="container">
             <div  class="row">
-                <div class="col-lg-8">
-                    <div class="center-services">
-                        <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                <div  class="col-lg-8">
+                    <div  class="center-services">
+                        <div  class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                             <div class="serv">
                                 <span class="icon-service"><img src="{{ asset('mosuqe/images/service-icon1.png') }}"
                                         alt="#" /></span>
@@ -344,17 +344,17 @@
                 <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s"
                     data-wow-delay="0.2s"
                     style="visibility: visible; animation-duration: 1s; animation-delay: 0.2s; animation-name: fadeIn;">
-                    <div class="widget clearfix">
+                    <div  class="widget clearfix">
                         <img src="{{ asset('mosuqe/images/mosuqe_01.jpg') }}" alt=""
                             class="img-responsive img-rounded">
-                        <div class="widget-title">
-                            <h3>محمد أبو جبل</h3>
+                        <div  class="widget-title">
+                            <h3 class="serv">محمد أبو جبل</h3>
                             <small>(أبو مصعب)</small>
                         </div>
                         <!-- end title -->
                         <p>مشرف الثانوية</p>
 
-                        <div class="footer-social">
+                        <div  class="footer-social">
                             <a href="#" class="btn grd1"><i class="fa fa-facebook"></i></a>
                             <a href="#" class="btn grd1"><i class="fa fa-github"></i></a>
                             <a href="#" class="btn grd1"><i class="fa fa-twitter"></i></a>
@@ -371,7 +371,7 @@
                         <img src="{{ asset('mosuqe/images/mosuqe_02.jpg') }}" alt=""
                             class="img-responsive img-rounded">
                         <div class="widget-title">
-                            <h3>براء أبو كميل</h3>
+                            <h3 class="serv">براء أبو كميل</h3>
                             <small>(أبو نضال)</small>
                         </div>
                         <!-- end title -->
@@ -391,11 +391,11 @@
                     <div class="widget clearfix">
                         <img src="images/mosuqe_03.jpg" alt="" class="img-responsive img-rounded">
                         <div class="widget-title">
-                            <h3>عبدالرحمن عليان</h3>
+                            <h3 class="serv">عبدالرحمن عليان</h3>
                             <small>(أبو محمد)</small>
                         </div>
                         <!-- end title -->
-                        <p>مشرف الحلقات اللإبتدائية.</p>
+                        <p>مشرف  اللإبتدائية</p>
 
                         <div class="footer-social">
                             <a href="#" class="btn grd1"><i class="fa fa-facebook"></i></a>
