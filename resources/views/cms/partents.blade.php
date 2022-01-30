@@ -6,7 +6,8 @@
   <title>MosqeSystem | @yield('title')</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<!-- Site Icons -->
+<link rel="shortcut icon" href="{{ asset('mosuqe/images/Untitled design.png') }}" type="image/x-icon" />
     <!-- Font Awesome -->
     <link rel="stylesheet" href="{{ asset('cms/plugins/fontawesome-free/css/all.min.css') }}">
     <!-- Ionicons -->
@@ -163,7 +164,7 @@
           <img src="{{ asset('cms/dist/img/user2-160x160.jpg') }}" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-             <a href="#" class="d-block">{{ Auth::user()->full_name }}</a> 
+             <a href="#" class="d-block">{{ Auth::user()->full_name }}</a>
         </div>
       </div>
 
@@ -609,7 +610,7 @@
                 </a>
             @endif
         </li>
-        
+
 
 
         </ul>

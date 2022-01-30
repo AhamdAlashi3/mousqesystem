@@ -12,7 +12,7 @@
 <meta name="description" content="">
 <meta name="author" content="">
 <!-- Site Icons -->
-<link rel="shortcut icon" href="{{ asset('mosuqe/images/fevicon.ico.png') }}" type="image/x-icon" />
+<link rel="shortcut icon" href="{{ asset('mosuqe/images/Untitled design.png') }}" type="image/x-icon" />
 <link rel="apple-touch-icon" href="{{ asset('mosuqe/images/apple-touch-icon.png') }}">
 <!-- Bootstrap CSS -->
 <link rel="stylesheet" href="{{ asset('mosuqe/css/bootstrap.min.css') }}">
@@ -103,7 +103,7 @@
                     <div class="text-contant">
                         <h2>
                             <span id="ahmadcenter" class="center"><span  class="icon">
-                                <img src="{{ asset('mosuqe/images/amin.jpg') }}" alt="#" /></span></span>
+                                <img src="{{ asset('mosuqe/images/icon-logo.jpg') }}" alt="#" /></span></span>
                             <a href="" class="typewrite" data-period="2000"
                                 data-type='[ "Welcome to Al-Amin-mosuqe", "You must send your children", " to the mosque!" ]'>
                                 <span class="wrap"></span>
@@ -185,7 +185,7 @@
    <div id="about" class="section wow fadeIn">
         <div class="container">
             <div class="heading">
-                <span class="icon-logo"><img src="{{ asset('mosuqe/images/amin.jpg') }}" alt="#"></span>
+                <span class="icon-logo"><img src="{{ asset('mosuqe/images/icon-logo.jpg') }}" alt="#"></span>
                 <h2>The Leader of center</h2>
                 <h6>Hamza khalil</h6>
             </div>
@@ -336,23 +336,23 @@
         <div class="container">
 
             <div class="heading">
-                <span class="icon-logo"><img src="{{ asset('mosuqe/images/amin.jpg') }}" alt="#"></span>
-                <h2>The Supervisor </h2>
+                <span class="icon-logo"><img src="{{ asset('mosuqe/images/icon-logo.jpg') }}" alt="#"></span>
+                <h2>مشرفين الحلقات </h2>
             </div>
 
-            <div class="row dev-list text-center">
-                <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s"
+            <div class="serv" class="row dev-list text-center">
+                <div  class="col-lg-4 col-md-4 col-sm-12 col-xs-12 wow fadeIn" data-wow-duration="1s"
                     data-wow-delay="0.2s"
                     style="visibility: visible; animation-duration: 1s; animation-delay: 0.2s; animation-name: fadeIn;">
                     <div  class="widget clearfix">
                         <img src="{{ asset('mosuqe/images/mosuqe_01.jpg') }}" alt=""
                             class="img-responsive img-rounded">
                         <div  class="widget-title">
-                            <h3 class="serv">محمد أبو جبل</h3>
-                            <small>(أبو مصعب)</small>
+                            <h3 class="ahh">محمد أبو جبل</h3>
+                            <small >(أبو مصعب)</small>
                         </div>
                         <!-- end title -->
-                        <p>مشرف الثانوية</p>
+                        <p class="ahh">مشرف الثانوية</p>
 
                         <div  class="footer-social">
                             <a href="#" class="btn grd1"><i class="fa fa-facebook"></i></a>
@@ -371,11 +371,11 @@
                         <img src="{{ asset('mosuqe/images/mosuqe_02.jpg') }}" alt=""
                             class="img-responsive img-rounded">
                         <div class="widget-title">
-                            <h3 class="serv">براء أبو كميل</h3>
+                            <h3 class="ahh">براء أبو كميل</h3>
                             <small>(أبو نضال)</small>
                         </div>
                         <!-- end title -->
-                        <p>مشرف الإعدادية</p>
+                        <p class="ahh">مشرف الإعدادية</p>
 
                         <div class="footer-social">
                             <a href="#" class="btn grd1"><i class="fa fa-facebook"></i></a>
@@ -391,11 +391,11 @@
                     <div class="widget clearfix">
                         <img src="images/mosuqe_03.jpg" alt="" class="img-responsive img-rounded">
                         <div class="widget-title">
-                            <h3 class="serv">عبدالرحمن عليان</h3>
+                            <h3 class="ahh">عبدالرحمن عليان</h3>
                             <small>(أبو محمد)</small>
                         </div>
                         <!-- end title -->
-                        <p>مشرف  اللإبتدائية</p>
+                        <p class="ahh">مشرف  اللإبتدائية</p>
 
                         <div class="footer-social">
                             <a href="#" class="btn grd1"><i class="fa fa-facebook"></i></a>
