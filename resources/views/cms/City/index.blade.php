@@ -17,7 +17,9 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Cities</h3>
+                            <a href="{{ route('city.create') }}"
+                                class="btn btn-info"><i
+                                class="fas fa-plus"></i> Add City </a>
 
                             <div class="card-tools">
                                 <div class="input-group input-group-sm" style="width: 150px;">

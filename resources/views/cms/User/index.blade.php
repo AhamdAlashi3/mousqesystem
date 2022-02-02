@@ -17,7 +17,9 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h2 class="card-title">Data Users</h2>
+                            <a href="{{ route('user.create') }}"
+                                class="btn btn-info"><i
+                                class="fas fa-plus"></i> Add User </a>
                             <div class="card-tools">
                                 <div class="input-group input-group-sm" style="width: 150px;">
                                     <input type="text" name="table_search" class="form-control float-right"
@@ -35,6 +37,7 @@
                                 <thead>
                                     <tr>
                                         <th>ID</th>
+                                        <th>Image</th>
                                         <th>First_name</th>
                                         <th>Last_name</th>
                                         <th>DoB</th>
@@ -51,6 +54,7 @@
                                     @foreach ($users as $index => $user)
                                         <tr>
                                             <td><span class="badge bg-dark">{{ $index + 1 }}</span></td>
+                                            <td><img src="{{ asset('cms/img/'.$user->image) }}"  height="100" width="100"/></td>
                                             <td>{{ $user->first_name }}</td>
                                             <td>{{ $user->last_name }}</td>
                                             <td>{{ $user->DoB }}</td>

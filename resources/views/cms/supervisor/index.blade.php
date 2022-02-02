@@ -17,7 +17,9 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h3 class="card-title">Data supervisor</h3>
+                            <a href="{{ route('supervisor.create') }}"
+                                class="btn btn-info"><i
+                                class="fas fa-plus"></i> Add Supervisor </a>
                             <div class="card-tools">
                                 <div class="input-group input-group-sm" style="width: 150px;">
                                     <input type="text" name="table_search" class="form-control float-right"

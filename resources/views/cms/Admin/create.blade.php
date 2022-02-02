@@ -112,7 +112,7 @@
                         });
 
                     </script>
-
+            @endsection
 <script>
     function store() {
 

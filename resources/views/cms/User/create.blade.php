@@ -6,11 +6,11 @@
 @section('sub-page', 'Create User')
 
 @section('styles')
-    <!-- Select2 -->
-    <link rel="stylesheet" href="{{ asset('cms/plugins/select2/css/select2.min.css') }}">
-    <link rel="stylesheet" href="{{ asset('cms/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
-    <!-- Toastr -->
-    <link rel="stylesheet" href="{{ asset('cms/plugins/toastr/toastr.min.css') }}">
+   <!-- Select2 -->
+   <link rel="stylesheet" href="{{ asset('cms/plugins/select2/css/select2.min.css') }}">
+   <link rel="stylesheet" href="{{ asset('cms/plugins/select2-bootstrap4-theme/select2-bootstrap4.min.css') }}">
+   <!-- Toastr -->
+   <link rel="stylesheet" href="{{ asset('cms/plugins/toastr/toastr.min.css') }}">
 @endsection
 
 
@@ -27,8 +27,8 @@
                             <h3 class="card-title">Create User </h3>
                         </div>
                         <!-- /.card-header -->
-                        <!-- form start     enctype="multipart/form-data"   -->
-                        <form role="form" id="create_form" >
+                        <!-- form start        -->
+                        <form role="form" id="create_form" enctype="multipart/form-data">
                             @csrf
                             <div class=" card-body">
 
@@ -76,6 +76,13 @@
                                     </div>
                                 </div>
 
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="file">Avatar</label>
+                                        <input type="file" name="file" placeholder="Choose image" id="image" class="form-control">
+                                    </div>
+                                </div>
+
 
                             </div>
                             <!-- /.card-body -->
@@ -111,40 +118,40 @@
                         });
 
                     </script>
+                                    <script>
+                                        function store() {
+                                            let data = new FormData();
+                                            data.append('city_id', document.getElementById('city_id').value);
+                                            data.append('first_name', document.getElementById('first_name').value);
+                                            data.append('last_name', document.getElementById('last_name').value);
+                                            data.append('DoB', document.getElementById('DoB').value);
+                                            data.append('phone', document.getElementById('phone').value);
+                                            data.append('email', document.getElementById('email').value);
+                                            data.append('gender', document.getElementById('male').checked ? 'M' : 'F');
+                                            data.append('image', document.getElementById('image').files[0]);
 
-                    <script>
-                        function store() {
-                            // Make a request for a user with a given ID
-                            axios.post('/cms/admin/user', {
-                                    city_id: document.getElementById('city_id').value,
-                                    first_name: document.getElementById('first_name').value,
-                                    last_name: document.getElementById('last_name').value,
-                                    DoB: document.getElementById('DoB').value,
-                                    email: document.getElementById('email').value,
-                                    phone: document.getElementById('phone').value,
-                                    gender: document.getElementById('male').checked ? 'M' : 'F',
-                                })
-                                .then(function(response) {
-                                    // handle success
-                                    console.log(response.data);
-                                    document.getElementById("create_form").reset();
-                                    showtoster(true, response.data.message);
-                                })
-                                .catch(function(error) {
-                                    // handle error
-                                    console.log(error.response);
-                                    showtoster(false, error.response.data.message);
-                                });
-                        }
+                                            axios.post('/cms/admin/user',  data)
+            .then(function(response) {
+                // handle success
+                console.log(response.data);
+                document.getElementById("create_form").reset();
+                showtoster(true, response.data.message);
+            })
+            .catch(function(error) {
+                // handle error
+                console.log(error.response);
+                showtoster(false, error.response.data.message);
+            });
+    }
 
-                        function showtoster(status, message) {
-                            if (status) {
-                                toastr.success(message)
-                            } else {
-                                toastr.error(message)
-                            }
-                        }
+    function showtoster(status, message) {
+        if (status) {
+            toastr.success(message)
+        } else {
+            toastr.error(message)
+        }
+    }
 
-                    </script>
+                                    </script>
 
-                @endsection
+                                    @endsection

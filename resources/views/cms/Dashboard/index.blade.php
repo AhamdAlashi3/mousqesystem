@@ -20,163 +20,147 @@
       <div class="container-fluid">
         <!-- Info boxes -->
         <div class="row">
-          <div class="col-12 col-sm-6 col-md-3">
-            <div class="info-box">
-              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-user-shield"></i></span>
+          <div class="col-lg-3 col-6">
+                <div class="small-box bg-gray-dark">
+                  <div class="inner">
+                    <h3>{{ $admins }}</h3>
 
-              <div class="info-box-content">
-                <span class="info-box-text"><a href="{{ route('admin.index') }}">Admins</a></span>
-                    <span class="info-box-number">
-                        {{ $admins }}
-                      <small>admin/s</small>
-                    </span>
-              </div>
-              <!-- /.info-box-content -->
+                    <p>Admin Count</p>
+                  </div>
+                  <div class="icon">
+                    <i class="fas fa-user-shield"></i>
+                  </div>
+                  <a href="{{ route('admin.index') }}" class="small-box-footer">admin/s <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
             </div>
-            <!-- /.info-box -->
-          </div>
-          <!-- /.col -->
-          <div class="col-12 col-sm-6 col-md-3">
-            <div class="info-box mb-3">
-              <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-user"></i></span>
 
-              <div class="info-box-content">
-                <span class="info-box-text"><a href="{{ route('user.index') }}">Users</a></span>
-                <span class="info-box-number">{{ $users }}
-                    <small>user/s</small>
-                </span>
-              </div>
-              <!-- /.info-box-content -->
+            <div class="col-lg-3 col-6">
+                <div class="small-box bg-info">
+                    <div class="inner">
+                      <h3>{{ $users }}</h3>
+
+                      <p>User Count</p>
+                    </div>
+                    <div class="icon">
+                      <i class="fas fa-user"></i>
+                    </div>
+                    <a href="{{ route('user.index') }}" class="small-box-footer">user/s <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
             </div>
-            <!-- /.info-box -->
-          </div>
-          <!-- /.col -->
 
-          <!-- fix for small devices only -->
-          <div class="clearfix hidden-md-up"></div>
+            <div class="col-lg-3 col-6">
 
-          <div class="col-12 col-sm-6 col-md-3">
-            <div class="info-box mb-3">
-              <span class="info-box-icon bg-success elevation-1"><i class="fas fa-city"></i></span>
+              <div class="small-box bg-red">
+                <div class="inner">
+                  <h3>{{ $cities }}</h3>
 
-              <div class="info-box-content">
-                <span class="info-box-text"><a href="{{ route('city.index') }}">Cities</a></span>
-                <span class="info-box-number">{{ $cities }}
-                    <small>city/ies</small>
-                </span>
-              </div>
-              <!-- /.info-box-content -->
+                  <p>City Count</p>
+                </div>
+                <div class="icon">
+                  <i class="fas fa-city"></i>
+                </div>
+                <a href="{{ route('city.index') }}" class="small-box-footer">city/ies <i class="fas fa-arrow-circle-right"></i></a>
+             </div>
             </div>
-            <!-- /.info-box -->
-          </div>
-          <!-- /.col -->
-          <div class="col-12 col-sm-6 col-md-3">
-            <div class="info-box mb-3">
-              <span class="info-box-icon bg-warning elevation-1"><i class="fas fa-users"></i></span>
 
-              <div class="info-box-content">
-                <span class="info-box-text"><a href="{{ route('student.index') }}">Students</a></span>
-                <span class="info-box-number">{{ $students }}
-                    <small>sutdent/s</small>
-                </span>
-              </div>
-              <!-- /.info-box-content -->
+            <div class="col-lg-3 col-6">
+
+             <div class="small-box bg-gradient-blue">
+                <div class="inner">
+                  <h3>{{ $students }}</h3>
+
+                  <p>Student Count</p>
+                </div>
+                <div class="icon">
+                  <i class="fas fa-users"></i>
+                </div>
+                <a href="{{ route('student.index') }}" class="small-box-footer">student/s <i class="fas fa-arrow-circle-right"></i></a>
+             </div>
             </div>
-            <!-- /.info-box -->
-          </div>
 
-          <div class="col-12 col-sm-6 col-md-3">
-            <div class="info-box mb-3">
-              <span class="info-box-icon bg-gray-dark elevation-1"><i class="fas fa-users"></i></span>
 
-              <div class="info-box-content">
-                <span class="info-box-text"><a href="{{ route('student_notes.index') }}">Students_notes</a></span>
-                <span class="info-box-number">{{ $students_notes }}
-                    <small>students_note/s</small>
-                </span>
-              </div>
-              <!-- /.info-box-content -->
+            <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-gradient-green">
+                  <div class="inner">
+                    <h3>{{ $students_notes }}</h3>
+                    <p>Student_Notes Count</p>
+                  </div>
+                  <div class="icon">
+                    <i class="fas fa-users"></i>
+                  </div>
+                  <a href="{{ route('student_notes.index') }}" class="small-box-footer">student_note/s <i class="fas fa-arrow-circle-right"></i></a>
+                </div>
             </div>
-            <!-- /.info-box -->
-          </div>
 
-
-          <div class="col-12 col-sm-6 col-md-3">
-            <div class="info-box mb-3">
-              <span class="info-box-icon bg-success elevation-1"><i class="fas fa-chalkboard"></i></span>
-
-              <div class="info-box-content">
-                <span class="info-box-text"><a href="{{ route('class.index') }}">Class</a></span>
-                <span class="info-box-number">{{ $class }}
-                    <small>class/es</small>
-                </span>
+            <div class="col-lg-3 col-6">
+              <div class="small-box bg-fuchsia">
+                <div class="inner">
+                  <h3>{{ $class }}</h3>
+                  <p>Class Count</p>
+                </div>
+                <div class="icon">
+                  <i class="fas fa-chalkboard"></i>
+                </div>
+                <a href="{{ route('class.index') }}" class="small-box-footer">classe/s <i class="fas fa-arrow-circle-right"></i></a>
               </div>
-              <!-- /.info-box-content -->
             </div>
-            <!-- /.info-box -->
-          </div>
 
+            <div class="col-lg-3 col-6">
+              <div class="small-box bg-dark">
+                    <div class="inner">
+                      <h3>{{ $teachers }}</h3>
+                      <p>teachers Count</p>
+                    </div>
+                    <div class="icon">
+                      <i class="fas fa-chalkboard-teacher"></i>
+                    </div>
+                    <a href="{{ route('teacher.index') }}" class="small-box-footer">teacher/s <i class="fas fa-arrow-circle-right"></i></a>
+               </div>
+            </div>
 
-          <div class="col-12 col-sm-6 col-md-3">
-            <div class="info-box mb-3">
-              <span class="info-box-icon bg-danger elevation-1"><i class="fas fa-chalkboard-teacher"></i></span>
-
-              <div class="info-box-content">
-                <span class="info-box-text"><a href="{{ route('teacher.index') }}">Teachers</a></span>
-                <span class="info-box-number">{{ $teachers }}
-                    <small>teacher/s</small>
-                </span>
+            <div class="col-lg-3 col-6">
+              <div class="small-box bg-warning">
+                <div class="inner">
+                  <h3>{{ $leaders }}</h3>
+                  <p>Leader Count</p>
+                </div>
+                <div class="icon">
+                  <i class="fas fa-user-secret"></i>
+                </div>
+                <a href="{{ route('leader.index') }}" class="small-box-footer">leader/s <i class="fas fa-arrow-circle-right"></i></a>
               </div>
-              <!-- /.info-box-content -->
             </div>
-            <!-- /.info-box -->
-          </div>
 
-
-          <div class="col-12 col-sm-6 col-md-3">
-            <div class="info-box mb-3">
-              <span class="info-box-icon bg-gray-dark elevation-1"><i class="fas fa-user-secret"></i></span>
-
-              <div class="info-box-content">
-                <span class="info-box-text"><a href="{{ route('leader.index') }}">Leaders</a></span>
-                <span class="info-box-number">{{ $leaders }}
-                    <small>leader/s</small>
-                </span>
+            <div class="col-lg-3 col-6">
+              <div class="small-box bg-gradient-teal">
+                <div class="inner">
+                  <h3>{{ $supervisors }}</h3>
+                  <p>supervisors Count</p>
+                </div>
+                <div class="icon">
+                  <i class="fas fa-user-tie"></i>
+                </div>
+                <a href="{{ route('supervisor.index') }}" class="small-box-footer">supervisor/s <i class="fas fa-arrow-circle-right"></i></a>
               </div>
-              <!-- /.info-box-content -->
             </div>
-            <!-- /.info-box -->
-          </div>
 
-          <div class="col-12 col-sm-6 col-md-3">
-            <div class="info-box mb-3">
-              <span class="info-box-icon bg-gradient-yellow elevation-1"><i class="fas fa-user-tie"></i></span>
-
-              <div class="info-box-content">
-                <span class="info-box-text"><a href="{{ route('supervisor.index') }}"> Supervisors</a></span>
-                <span class="info-box-number">{{ $supervisors }}
-                    <small>supervisor/es</small>
-                </span>
+            <div class="col-lg-3 col-6">
+              <div class="small-box bg-danger">
+                <div class="inner">
+                  <h3>{{ $surahs }}</h3>
+                  <p>surah Count</p>
+                </div>
+                <div class="icon">
+                  <i class="fas fa-book-open"></i>
+                </div>
+                <a href="{{ route('surah.index') }}" class="small-box-footer">surah/s <i class="fas fa-arrow-circle-right"></i></a>
               </div>
-              <!-- /.info-box-content -->
             </div>
-            <!-- /.info-box -->
+
           </div>
 
-          <div class="col-12 col-sm-6 col-md-3">
-            <div class="info-box mb-3">
-              <span class="info-box-icon bg-info elevation-1"><i class="fas fa-book-open"></i></span>
-
-              <div class="info-box-content">
-                <span class="info-box-text"><a href="{{ route('surah.index') }}"> Surahs</a></span>
-                <span class="info-box-number">{{ $surahs }}
-                    <small>surah/s</small>
-                </span>
-              </div>
-              <!-- /.info-box-content -->
-            </div>
-            <!-- /.info-box -->
-          </div>
+        </div>
           <!-- /.col -->
         </div>
         <!-- /.row -->
